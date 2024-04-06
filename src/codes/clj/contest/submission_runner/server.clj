@@ -1,6 +1,6 @@
-(ns microservice-boilerplate.server
-  (:require [com.stuartsierra.component :as component]
-            [microservice-boilerplate.routes :as routes]
+(ns codes.clj.contest.submission-runner.server
+  (:require [codes.clj.contest.submission-runner.routes :as routes]
+            [com.stuartsierra.component :as component]
             [parenthesin.components.config.aero :as config]
             [parenthesin.components.db.jdbc-hikari :as database]
             [parenthesin.components.http.clj-http :as http]

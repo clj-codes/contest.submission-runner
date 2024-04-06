@@ -1,6 +1,6 @@
-(ns microservice-boilerplate.routes
-  (:require [microservice-boilerplate.ports.http-in :as ports.http-in]
-            [microservice-boilerplate.schemas.wire-in :as schemas.wire-in]
+(ns codes.clj.contest.submission-runner.routes
+  (:require [codes.clj.contest.submission-runner.ports.http-in :as ports.http-in]
+            [codes.clj.contest.submission-runner.schemas.wire-in :as schemas.wire-in]
             [reitit.swagger :as swagger]))
 
 (def routes

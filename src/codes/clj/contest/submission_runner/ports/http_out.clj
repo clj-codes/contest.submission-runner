@@ -1,6 +1,6 @@
-(ns microservice-boilerplate.ports.http-out
-  (:require [microservice-boilerplate.adapters :as adapters.price]
-            [microservice-boilerplate.schemas.types :as schemas.types]
+(ns codes.clj.contest.submission-runner.ports.http-out
+  (:require [codes.clj.contest.submission-runner.adapters :as adapters.price]
+            [codes.clj.contest.submission-runner.schemas.types :as schemas.types]
             [parenthesin.components.http.clj-http :as components.http]))
 
 (defn get-btc-usd-price

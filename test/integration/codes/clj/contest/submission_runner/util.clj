@@ -1,4 +1,4 @@
-(ns integration.microservice-boilerplate.util
+(ns integration.codes.clj.contest.submission-runner.util
   (:require [com.stuartsierra.component :as component]
             [parenthesin.helpers.logs :as logs]
             [parenthesin.helpers.migrations :as migrations]

@@ -1,9 +1,9 @@
-(ns microservice-boilerplate.controllers
-  (:require [microservice-boilerplate.db :as db]
-            [microservice-boilerplate.logics :as logics]
-            [microservice-boilerplate.ports.http-out :as http-out]
-            [microservice-boilerplate.schemas.db :as schemas.db]
-            [microservice-boilerplate.schemas.types :as schemas.types]))
+(ns codes.clj.contest.submission-runner.controllers
+  (:require [codes.clj.contest.submission-runner.db :as db]
+            [codes.clj.contest.submission-runner.logics :as logics]
+            [codes.clj.contest.submission-runner.ports.http-out :as http-out]
+            [codes.clj.contest.submission-runner.schemas.db :as schemas.db]
+            [codes.clj.contest.submission-runner.schemas.types :as schemas.types]))
 
 (defn- instant-now [] (java.util.Date/from (java.time.Instant/now)))
 

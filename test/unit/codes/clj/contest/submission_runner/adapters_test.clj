@@ -1,14 +1,14 @@
-(ns unit.microservice-boilerplate.adapters-test
+(ns unit.codes.clj.contest.submission-runner.adapters-test
   (:require [clojure.test :refer [deftest is testing use-fixtures]]
             [clojure.test.check.clojure-test :refer [defspec]]
             [clojure.test.check.properties :as properties]
+            [codes.clj.contest.submission-runner.adapters :as adapters]
+            [codes.clj.contest.submission-runner.schemas.db :as schemas.db]
+            [codes.clj.contest.submission-runner.schemas.wire-in :as schemas.wire-in]
             [malli.core :as m]
             [malli.generator :as mg]
             [matcher-combinators.matchers :as matchers]
             [matcher-combinators.test :refer [match?]]
-            [microservice-boilerplate.adapters :as adapters]
-            [microservice-boilerplate.schemas.db :as schemas.db]
-            [microservice-boilerplate.schemas.wire-in :as schemas.wire-in]
             [parenthesin.helpers.malli :as helpers.malli]))
 
 (use-fixtures :once helpers.malli/with-intrumentation)

@@ -1,8 +1,8 @@
 (ns codes.clj.contest.submission-runner.db
-  (:require [honey.sql :as sql]
-            [honey.sql.helpers :as sql.helpers]
-            [codes.clj.contest.submission-runner.schemas.db :as schemas.db]
+  (:require [codes.clj.contest.submission-runner.schemas.db :as schemas.db]
             [codes.clj.contest.submission-runner.schemas.types :as schemas.types]
+            [honey.sql :as sql]
+            [honey.sql.helpers :as sql.helpers]
             [parenthesin.components.db.jdbc-hikari :as components.database]))
 
 (defn insert-wallet-transaction

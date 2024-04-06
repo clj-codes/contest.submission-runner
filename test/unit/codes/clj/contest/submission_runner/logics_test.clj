@@ -2,11 +2,11 @@
   (:require [clojure.test :refer [are deftest is testing use-fixtures]]
             [clojure.test.check.clojure-test :refer [defspec]]
             [clojure.test.check.properties :as properties]
-            [malli.core :as m]
-            [malli.generator :as mg]
             [codes.clj.contest.submission-runner.adapters :as adapters]
             [codes.clj.contest.submission-runner.logics :as logics]
             [codes.clj.contest.submission-runner.schemas.db :as schemas.db]
+            [malli.core :as m]
+            [malli.generator :as mg]
             [parenthesin.helpers.malli :as helpers.malli]))
 
 (use-fixtures :once helpers.malli/with-intrumentation)

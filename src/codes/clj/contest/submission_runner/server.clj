@@ -1,6 +1,6 @@
 (ns codes.clj.contest.submission-runner.server
-  (:require [com.stuartsierra.component :as component]
-            [codes.clj.contest.submission-runner.routes :as routes]
+  (:require [codes.clj.contest.submission-runner.routes :as routes]
+            [com.stuartsierra.component :as component]
             [parenthesin.components.config.aero :as config]
             [parenthesin.components.db.jdbc-hikari :as database]
             [parenthesin.components.http.clj-http :as http]

@@ -1,4 +1,4 @@
-(ns microservice-boilerplate.schemas.types
+(ns codes.clj.contest.submission-runner.schemas.types
   (:require [com.stuartsierra.component :as component]
             [malli.core :as m]
             [malli.experimental.time :as met]

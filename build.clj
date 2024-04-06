@@ -2,8 +2,8 @@
   (:refer-clojure :exclude [test])
   (:require [clojure.tools.build.api :as b]))
 
-(def default-lib 'com.github.parenthesin/microservice-boilerplate-malli)
-(def default-main 'microservice-boilerplate.server)
+(def default-lib 'com.github.clj-codes/codes.clj.contest.submission-runner)
+(def default-main 'codes.clj.contest.submission-runner.server)
 (def default-version "0.0.1-SNAPSHOT")
 (def class-dir "target/classes")
 

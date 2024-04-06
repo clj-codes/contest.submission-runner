@@ -1,6 +1,6 @@
-(ns microservice-boilerplate.logics
-  (:require [microservice-boilerplate.adapters :as adapters]
-            [microservice-boilerplate.schemas.db :as schemas.db])
+(ns codes.clj.contest.submission-runner.logics
+  (:require [codes.clj.contest.submission-runner.adapters :as adapters]
+            [codes.clj.contest.submission-runner.schemas.db :as schemas.db])
   (:import [java.util UUID]))
 
 (defn uuid-from-string

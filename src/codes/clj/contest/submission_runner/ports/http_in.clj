@@ -1,6 +1,6 @@
-(ns microservice-boilerplate.ports.http-in
-  (:require [microservice-boilerplate.adapters :as adapters]
-            [microservice-boilerplate.controllers :as controllers]))
+(ns codes.clj.contest.submission-runner.ports.http-in
+  (:require [codes.clj.contest.submission-runner.adapters :as adapters]
+            [codes.clj.contest.submission-runner.controllers :as controllers]))
 
 (defn get-history
   [{components :components}]

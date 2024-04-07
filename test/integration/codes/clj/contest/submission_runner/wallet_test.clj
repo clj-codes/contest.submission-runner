@@ -1,14 +1,7 @@
 (ns integration.codes.clj.contest.submission-runner.wallet-test
   (:require [clojure.test :refer [use-fixtures]]
-            [codes.clj.contest.submission-runner.routes :as routes]
-            [com.stuartsierra.component :as component]
             [integration.codes.clj.contest.submission-runner.util :as util]
             [matcher-combinators.matchers :as matchers]
-            [parenthesin.components.config.aero :as components.config]
-            [parenthesin.components.db.jdbc-hikari :as components.database]
-            [parenthesin.components.http.clj-http :as components.http]
-            [parenthesin.components.router.reitit-malli :as components.router]
-            [parenthesin.components.server.reitit-pedestal-jetty :as components.webserver]
             [parenthesin.helpers.malli :as helpers.malli]
             [parenthesin.helpers.state-flow.http :as state-flow.http]
             [parenthesin.helpers.state-flow.server.pedestal :as state-flow.server]
@@ -18,20 +11,9 @@
 
 (use-fixtures :once helpers.malli/with-intrumentation)
 
-(defn- create-and-start-components! []
-  (component/start-system
-   (component/system-map
-    :config (components.config/new-config)
-    :http (components.http/new-http-mock {})
-    :router (components.router/new-router routes/routes)
-    :database (component/using (components.database/new-database)
-                               [:config])
-    :webserver (component/using (components.webserver/new-webserver)
-                                [:config :http :router :database]))))
-
 (defflow
   flow-integration-wallet-test
-  {:init (util/start-system! create-and-start-components!)
+  {:init util/start-system!
    :cleanup util/stop-system!
    :fail-fast? true}
   (flow "should interact with system"

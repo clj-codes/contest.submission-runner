@@ -1,7 +1,7 @@
 (ns user
-  (:require [malli.dev :as dev]
-            [malli.dev.pretty :as pretty]
-            [microservice-boilerplate.server]))
+  (:require [codes.clj.contest.submission-runner.server]
+            [malli.dev :as dev]
+            [malli.dev.pretty :as pretty]))
 
 (defn start
   []

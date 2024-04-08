@@ -3,6 +3,7 @@
             [integration.codes.clj.contest.submission-runner.util :as util]
             [matcher-combinators.matchers :as matchers]
             [parenthesin.helpers.malli :as helpers.malli]
+            [clj-commons.digest :as digest]
             [parenthesin.helpers.state-flow.server.pedestal :as state-flow.server]
             [state-flow.api :refer [defflow]]
             [state-flow.assertions.matcher-combinators :refer [match?]]
@@ -17,9 +18,13 @@
    :fail-fast? true}
 
   (flow "should receive an submission"
-    [:let [submission-input {:code "(ns runner 
-                                      (:require [clojure.test :refer [use-fixtures]])
-                                      (defn my-sum [a b] (+ a b)))"
+    [:let [id (random-uuid)
+           code "(ns runner 
+                   (:require [clojure.string :as str])) 
+                  (defn my-sum [a b] (+ a b))"
+           submission-input {:id id
+                             :code code
+                             :code-hash (digest/md5 code)
                              :language :clojure
                              :test-cases {:case-1 {:input "(my-sum 1 2)"
                                                    :output 3}

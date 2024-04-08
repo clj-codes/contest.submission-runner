@@ -2,7 +2,9 @@
 
 (def Submission
   [:map
+   [:id string?]
    [:code string?]
+   [:code-hash string?]
    [:language [:enum :clojure]]
    [:test-cases [:map-of :keyword
                  [:map

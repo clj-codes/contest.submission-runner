@@ -1,24 +1,25 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.11.2"}
+ :deps {org.clojure/clojure               {:mvn/version "1.11.2"}
         com.github.parenthesin/components {:mvn/version "0.2.5"
                                            :exclusions  [prismatic/schema]}
-        com.github.seancorfield/honeysql {:mvn/version "2.6.1126"}
-        metosin/malli {:mvn/version "0.15.0"}
-        metosin/reitit-swagger {:mvn/version "0.6.0"}
-        org.postgresql/postgresql {:mvn/version "42.7.3"}}
+        org.clj-commons/digest            {:mvn/version "1.4.100"}
+        com.github.seancorfield/honeysql  {:mvn/version "2.6.1126"}
+        metosin/malli                     {:mvn/version "0.15.0"}
+        metosin/reitit-swagger            {:mvn/version "0.6.0"}
+        org.postgresql/postgresql         {:mvn/version "42.7.3"}}
  :aliases
  {:dev {:extra-paths ["test" "dev"]
         :extra-deps  {org.clojars.bigsy/pg-embedded-clj {:mvn/version "1.0.1"}
-                      lambdaisland/kaocha {:mvn/version "1.88.1376"}
-                      lambdaisland/kaocha-cloverage {:mvn/version "1.1.89"}
-                      nubank/matcher-combinators {:mvn/version "3.9.1"}
-                      nubank/state-flow {:mvn/version "5.15.0"}}}
+                      lambdaisland/kaocha               {:mvn/version "1.88.1376"}
+                      lambdaisland/kaocha-cloverage     {:mvn/version "1.1.89"}
+                      nubank/matcher-combinators        {:mvn/version "3.9.1"}
+                      nubank/state-flow                 {:mvn/version "5.15.0"}}}
   :test {:extra-paths ["test"]
          :extra-deps  {org.clojars.bigsy/pg-embedded-clj {:mvn/version "1.0.1"}
-                       lambdaisland/kaocha {:mvn/version "1.88.1376"}
-                       lambdaisland/kaocha-cloverage {:mvn/version "1.1.89"}
-                       nubank/matcher-combinators {:mvn/version "3.9.1"}
-                       nubank/state-flow {:mvn/version "5.15.0"}}
+                       lambdaisland/kaocha               {:mvn/version "1.88.1376"}
+                       lambdaisland/kaocha-cloverage     {:mvn/version "1.1.89"}
+                       nubank/matcher-combinators        {:mvn/version "3.9.1"}
+                       nubank/state-flow                 {:mvn/version "5.15.0"}}
          :main-opts   ["-m" "kaocha.runner"]}
 
   :clojure-lsp {:replace-deps {com.github.clojure-lsp/clojure-lsp-standalone {:mvn/version "2024.03.13-13.11.00"}}

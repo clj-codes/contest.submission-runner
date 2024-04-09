@@ -4,9 +4,9 @@
 
 (defn wire->internal
   {:malli/schema [:=> [:cat wire.in.submission/Submission] wire.db.submission/Submission]}
-  [wire]
-  {:submission/id (-> wire :id)
-   :submission/code (-> wire :code)
-   :submission/code_hash (-> wire :code-hash)
-   :submission/language (-> wire :language)
-   :submission/test_cases (-> wire :test-cases)})
+  [{:keys [id code code-hash language test-cases]}]
+  {:submission/id id
+   :submission/code code
+   :submission/code_hash code-hash
+   :submission/language language
+   :submission/test_cases test-cases})

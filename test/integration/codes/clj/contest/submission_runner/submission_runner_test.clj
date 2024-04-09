@@ -1,9 +1,9 @@
 (ns integration.codes.clj.contest.submission-runner.submission-runner-test
-  (:require [clojure.test :refer [use-fixtures]]
+  (:require [clj-commons.digest :as digest]
+            [clojure.test :refer [use-fixtures]]
             [integration.codes.clj.contest.submission-runner.util :as util]
             [matcher-combinators.matchers :as matchers]
             [parenthesin.helpers.malli :as helpers.malli]
-            [clj-commons.digest :as digest]
             [parenthesin.helpers.state-flow.server.pedestal :as state-flow.server]
             [state-flow.api :refer [defflow]]
             [state-flow.assertions.matcher-combinators :refer [match?]]

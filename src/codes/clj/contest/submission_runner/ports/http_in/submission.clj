@@ -8,5 +8,5 @@
   (let [id (-> submission
                (adapters.submission/wire->internal)
                (controllers.submission/submit-code-execution!))]
-    {:status 201}))
+    {:status 201 :body {:id id}}))
 

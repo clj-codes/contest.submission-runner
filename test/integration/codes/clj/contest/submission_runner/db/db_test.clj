@@ -1,4 +1,4 @@
-(ns integration.codes.clj.contest.submission-runner.db-test
+(ns integration.codes.clj.contest.submission-runner.db.db-test
   (:require [clojure.test :refer [use-fixtures]]
             [codes.clj.contest.submission-runner.db :as db]
             [com.stuartsierra.component :as component]
